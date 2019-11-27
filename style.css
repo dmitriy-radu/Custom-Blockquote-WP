@@ -1,0 +1,158 @@
+/*============================================================
+=            Custom-Blockquote-WP by Dmitriy Rady            =
+============================================================*/
+blockquote {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 25px auto;
+    padding: 20px 30px;
+    color: #fff;
+    border-radius: 5px;
+    background-color: #535658;
+    -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .07);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .07);
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+blockquote::before {
+    width: 56px;
+    height: 56px;
+    content: '';
+    background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTYiIGhlaWdodD0iNTYiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48Y2lyY2xlIGZpbGw9IiNGMkY0RjYiIGN4PSIyOCIgY3k9IjI4IiByPSIyOCIvPjxyZWN0IHN0cm9rZT0iIzRCNTQ1QiIgc3Ryb2tlLXdpZHRoPSIyIiBmaWxsPSIjRkZGIiB4PSIxNiIgeT0iMTMiIHdpZHRoPSIyNCIgaGVpZ2h0PSIzMCIgcng9IjMiLz48cGF0aCBkPSJNMjMgMTloMTBhMSAxIDAgMDEwIDJIMjNhMSAxIDAgMDEwLTJ6bTAgNmgxMGExIDEgMCAwMTAgMkgyM2ExIDEgMCAwMTAtMnptMCA2aDZhMSAxIDAgMDEwIDJoLTZhMSAxIDAgMDEwLTJ6IiBmaWxsPSIjNEI1NDVCIi8+PHBhdGggZD0iTTMzLjQzIDM3LjA3bDIuMjcuMWExIDEgMCAwMC43NS0uM0w0OC4wMyAyNS4zYTEgMSAwIDAwMC0xLjQxbC0xLjQxLTEuNDJhMSAxIDAgMDAtMS40MiAwTDMzLjYzIDM0LjA1YTEgMSAwIDAwLS4zLjc1bC4xIDIuMjd6IiBzdHJva2U9IiM0QjU0NUIiIHN0cm9rZS13aWR0aD0iMiIgZmlsbD0iI0ZGRkFEOSIvPjxwYXRoIGQ9Ik00Mi4zNyAyNS4zbDIuODMgMi44MyAyLjEyLTIuMTJhMiAyIDAgMTAtMi44Mi0yLjgzbC0yLjEzIDIuMTJ6IiBzdHJva2U9IiM0QjU0NUIiIHN0cm9rZS13aWR0aD0iMiIgZmlsbD0iIzUzQjM3NCIvPjwvZz48L3N2Zz4=);
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+}
+
+blockquote p {
+    font-size: 16px;
+    margin: 0 auto !important;
+    padding: 0 0 0 20px;
+}
+
+blockquote p a {
+    position: relative;
+    display: inline-block;
+    margin: 0 !important;
+    padding: 0 !important;
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    color: #fff !important;
+    border-bottom: 2px solid !important;
+    border-radius: 0 !important;
+    background: none !important;
+}
+
+blockquote p a:hover {
+    border-color: transparent !important;
+}
+
+blockquote p a::after {
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    display: block;
+    width: 0;
+    height: 1px;
+    content: '';
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    opacity: 0;
+    background-color: #000;
+}
+
+blockquote p a:hover::after {
+    width: 100%;
+    opacity: 1;
+}
+
+blockquote.warning::before,
+blockquote.question::before,
+blockquote.danger::before,
+blockquote.check::before,
+blockquote.info::before {
+    border-radius: 50%;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+blockquote.warning {
+    background-color: #7ea84f;
+}
+
+blockquote.warning::before {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyBhcmlhLWhpZGRlbj0idHJ1ZSIgZm9jdXNhYmxlPSJmYWxzZSIgZGF0YS1wcmVmaXg9ImZhZCIgcm9sZT0iaW1nIiAgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIgogICAgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgMTkyIDUxMiIgc3R5bGU9ImNvbG9yOiAjN2VhODRmOyI+CiAgICA8cGF0aCBmaWxsPSJjdXJyZW50Q29sb3IiIGQ9Ik0xNzYgNDMyYzAgNDQuMTEyLTM1Ljg4OCA4MC04MCA4MHMtODAtMzUuODg4LTgwLTgwIDM1Ljg4OC04MCA4MC04MCA4MCAzNS44ODggODAgODB6TTI1LjI2IDI1LjE5OWwxMy42IDI3MkMzOS40OTkgMzA5Ljk3MiA1MC4wNDEgMzIwIDYyLjgzIDMyMGg2Ni4zNGMxMi43ODkgMCAyMy4zMzEtMTAuMDI4IDIzLjk3LTIyLjgwMWwxMy42LTI3MkMxNjcuNDI1IDExLjQ5IDE1Ni40OTYgMCAxNDIuNzcgMEg0OS4yM0MzNS41MDQgMCAyNC41NzUgMTEuNDkgMjUuMjYgMjUuMTk5eiI+PC9wYXRoPgo8L3N2Zz4=);
+}
+
+blockquote.question {
+    background-color: #314d81;
+}
+
+blockquote.question::before {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyBhcmlhLWhpZGRlbj0idHJ1ZSIgZm9jdXNhYmxlPSJmYWxzZSIgZGF0YS1wcmVmaXg9ImZhZCIgcm9sZT0iaW1nIiAgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIgogICAgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgMzg0IDUxMiIgc3R5bGU9ImNvbG9yOiAjMzE0ZDgxOyI+CiAgICA8cGF0aCBmaWxsPSJjdXJyZW50Q29sb3IiIGQ9Ik0yMDIuMDIxIDBDMTIyLjIwMiAwIDcwLjUwMyAzMi43MDMgMjkuOTE0IDkxLjAyNmMtNy4zNjMgMTAuNTgtNS4wOTMgMjUuMDg2IDUuMTc4IDMyLjg3NGw0My4xMzggMzIuNzA5YzEwLjM3MyA3Ljg2NSAyNS4xMzIgNi4wMjYgMzMuMjUzLTQuMTQ4IDI1LjA0OS0zMS4zODEgNDMuNjMtNDkuNDQ5IDgyLjc1Ny00OS40NDkgMzAuNzY0IDAgNjguODE2IDE5Ljc5OSA2OC44MTYgNDkuNjMxIDAgMjIuNTUyLTE4LjYxNyAzNC4xMzQtNDguOTkzIDUxLjE2NC0zNS40MjMgMTkuODYtODIuMjk5IDQ0LjU3Ni04Mi4yOTkgMTA2LjQwNVYzMjBjMCAxMy4yNTUgMTAuNzQ1IDI0IDI0IDI0aDcyLjQ3MWMxMy4yNTUgMCAyNC0xMC43NDUgMjQtMjR2LTUuNzczYzAtNDIuODYgMTI1LjI2OC00NC42NDUgMTI1LjI2OC0xNjAuNjI3QzM3Ny41MDQgNjYuMjU2IDI4Ni45MDIgMCAyMDIuMDIxIDB6TTE5MiAzNzMuNDU5Yy0zOC4xOTYgMC02OS4yNzEgMzEuMDc1LTY5LjI3MSA2OS4yNzEgMCAzOC4xOTUgMzEuMDc1IDY5LjI3IDY5LjI3MSA2OS4yN3M2OS4yNzEtMzEuMDc1IDY5LjI3MS02OS4yNzEtMzEuMDc1LTY5LjI3LTY5LjI3MS02OS4yN3oiPjwvcGF0aD4KPC9zdmc+);
+}
+
+blockquote.danger {
+    background-color: #b63e3b;
+}
+
+blockquote.danger::before {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyBhcmlhLWhpZGRlbj0idHJ1ZSIgZm9jdXNhYmxlPSJmYWxzZSIgZGF0YS1wcmVmaXg9ImZhZCIgcm9sZT0iaW1nIiAgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIgogICAgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgMzUyIDUxMiIgc3R5bGU9ImNvbG9yOiAjYjYzZTNiOyI+CiAgICA8cGF0aCBmaWxsPSJjdXJyZW50Q29sb3IiIGQ9Ik0yNDIuNzIgMjU2bDEwMC4wNy0xMDAuMDdjMTIuMjgtMTIuMjggMTIuMjgtMzIuMTkgMC00NC40OGwtMjIuMjQtMjIuMjRjLTEyLjI4LTEyLjI4LTMyLjE5LTEyLjI4LTQ0LjQ4IDBMMTc2IDE4OS4yOCA3NS45MyA4OS4yMWMtMTIuMjgtMTIuMjgtMzIuMTktMTIuMjgtNDQuNDggMEw5LjIxIDExMS40NWMtMTIuMjggMTIuMjgtMTIuMjggMzIuMTkgMCA0NC40OEwxMDkuMjggMjU2IDkuMjEgMzU2LjA3Yy0xMi4yOCAxMi4yOC0xMi4yOCAzMi4xOSAwIDQ0LjQ4bDIyLjI0IDIyLjI0YzEyLjI4IDEyLjI4IDMyLjIgMTIuMjggNDQuNDggMEwxNzYgMzIyLjcybDEwMC4wNyAxMDAuMDdjMTIuMjggMTIuMjggMzIuMiAxMi4yOCA0NC40OCAwbDIyLjI0LTIyLjI0YzEyLjI4LTEyLjI4IDEyLjI4LTMyLjE5IDAtNDQuNDhMMjQyLjcyIDI1NnoiPjwvcGF0aD4KPC9zdmc+);
+}
+
+blockquote.check {
+    background-color: #34bc58;
+}
+
+blockquote.check::before {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyBhcmlhLWhpZGRlbj0idHJ1ZSIgZm9jdXNhYmxlPSJmYWxzZSIgZGF0YS1wcmVmaXg9ImZhZCIgcm9sZT0iaW1nIiAgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIgogICAgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiIgc3R5bGU9ImNvbG9yOiAjMzRCQzU4OyI+CiAgICA8cGF0aCBmaWxsPSJjdXJyZW50Q29sb3IiIGQ9Ik0xNzMuODk4IDQzOS40MDRsLTE2Ni40LTE2Ni40Yy05Ljk5Ny05Ljk5Ny05Ljk5Ny0yNi4yMDYgMC0zNi4yMDRsMzYuMjAzLTM2LjIwNGM5Ljk5Ny05Ljk5OCAyNi4yMDctOS45OTggMzYuMjA0IDBMMTkyIDMxMi42OSA0MzIuMDk1IDcyLjU5NmM5Ljk5Ny05Ljk5NyAyNi4yMDctOS45OTcgMzYuMjA0IDBsMzYuMjAzIDM2LjIwNGM5Ljk5NyA5Ljk5NyA5Ljk5NyAyNi4yMDYgMCAzNi4yMDRsLTI5NC40IDI5NC40MDFjLTkuOTk4IDkuOTk3LTI2LjIwNyA5Ljk5Ny0zNi4yMDQtLjAwMXoiPjwvcGF0aD4KPC9zdmc+);
+}
+
+blockquote.info {
+    background-color: #fe9418cc;
+}
+
+blockquote.info::before {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyBhcmlhLWhpZGRlbj0idHJ1ZSIgZm9jdXNhYmxlPSJmYWxzZSIgZGF0YS1wcmVmaXg9ImZhZCIgcm9sZT0iaW1nIiAgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIgogICAgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgMTkyIDUxMiIgc3R5bGU9ImNvbG9yOiAjZmU5NDE4Y2M7Ij4KICAgIDxwYXRoIGZpbGw9ImN1cnJlbnRDb2xvciIgZD0iTTIwIDQyNC4yMjloMjBWMjc5Ljc3MUgyMGMtMTEuMDQ2IDAtMjAtOC45NTQtMjAtMjBWMjEyYzAtMTEuMDQ2IDguOTU0LTIwIDIwLTIwaDExMmMxMS4wNDYgMCAyMCA4Ljk1NCAyMCAyMHYyMTIuMjI5aDIwYzExLjA0NiAwIDIwIDguOTU0IDIwIDIwVjQ5MmMwIDExLjA0Ni04Ljk1NCAyMC0yMCAyMEgyMGMtMTEuMDQ2IDAtMjAtOC45NTQtMjAtMjB2LTQ3Ljc3MWMwLTExLjA0NiA4Ljk1NC0yMCAyMC0yMHpNOTYgMEM1Ni4yMzUgMCAyNCAzMi4yMzUgMjQgNzJzMzIuMjM1IDcyIDcyIDcyIDcyLTMyLjIzNSA3Mi03MlMxMzUuNzY0IDAgOTYgMHoiIGNsYXNzPSIiPjwvcGF0aD4KPC9zdmc+);
+}
+
+@media only screen and (max-width: 990px) {
+    blockquote {
+        margin: 25px -20px;
+        /* -20px  */
+        border-radius: 0;
+    }
+}
+
+@media only screen and (max-width: 736px) {
+    blockquote {
+        flex-direction: column;
+        padding: 16px;
+        border-radius: 0;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+    }
+
+    blockquote::before {
+        margin-bottom: 16px;
+    }
+
+    blockquote p {
+        font-size: 14px;
+        line-height: 21px;
+        margin: 0 auto !important;
+        padding: 0 8px;
+        text-align: center;
+    }
+}
+
+/*=====  End of Custom-Blockquote-WP by Dmitriy Rady  ======*/
